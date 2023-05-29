@@ -35,7 +35,7 @@ public final class FighterFactory {
 		if(imageResource.containsKey(path)) return imageResource.get(path);
 		else {
 			Image newImage =
-				imageResourceLoader.loadResource(ClassLoader.getSystemClassLoader(), path);
+				loaderAdapter.loadImage(path);
 			imageResource.put(path, newImage);
 			return newImage;
 		}
